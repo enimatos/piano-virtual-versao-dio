@@ -129,3 +129,24 @@ input:checked:before{
 .piano-keys .key.hide span{
     display: none;
 }
+
+.autoplay-container {
+    margin-top: 20px;
+    text-align:right;
+}
+
+#autoplay-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: grey;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#autoplay-btn:hover {
+    background-color: gray;
+    color: white;
+}
