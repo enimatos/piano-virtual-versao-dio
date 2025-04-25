@@ -68,3 +68,26 @@ volumeSlider.addEventListener("input", handleVolume);
 
 // Adiciona o evento ao checkbox para mostrar ou esconder os nomes das teclas
 keysCheck.addEventListener("click", showHideKeys);
+
+
+// Seleciona o botão de autoplay
+const autoplayBtn = document.getElementById("autoplay-btn");
+
+// Sequência de teclas para autoplay (você pode trocar por qualquer melodia)
+const autoplaySequence = ["a", "s", "d", "f", "g", "f", "d", "s", "a"];
+
+// Função que toca uma sequência de notas automaticamente
+const autoplay = () => {
+    let delay = 0;
+
+    autoplaySequence.forEach((key) => {
+        setTimeout(() => {
+            playTune(key);
+        }, delay);
+
+        delay += 350; // tempo entre notas (em milissegundos)
+    });
+};
+
+// Adiciona evento de clique ao botão
+autoplayBtn.addEventListener("click", autoplay);
